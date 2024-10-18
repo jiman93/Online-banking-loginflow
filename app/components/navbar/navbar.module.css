@@ -1,0 +1,104 @@
+/* Desktop navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menuButton {
+  display: none; /* Hidden by default, only visible on mobile */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin-right: 20px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.searchBar {
+  margin-right: auto; /* Center the search bar */
+}
+
+.input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* Pink Login Button */
+.loginButton {
+  margin-left: auto;
+}
+
+/* Overlay when sidebar is open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900; /* Behind the sidebar */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .menuButton {
+    display: block; /* Show the menu button on mobile */
+  }
+
+  .navLinks {
+    display: none; /* Hide the regular nav links on mobile */
+    align-items: center;
+  }
+
+  .loginButton {
+    display: none;
+  }
+
+  .searchBar {
+    display: none; /* Hide the search bar in the main navbar on mobile */
+  }
+
+  .loginBtn {
+    width: 100%; /* Make the login button full width on mobile */
+  }
+
+  .input {
+    width: 100%;
+  }
+}

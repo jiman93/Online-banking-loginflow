@@ -1,0 +1,75 @@
+.loginBtn {
+  background-color: #f11fb9; /* Pink color */
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  background-color: #f11fb9;
+}
+
+.input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Sidebar (mobile only) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden off-screen initially */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0; /* When open, slide the sidebar into view */
+}
+
+.closeButton {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebarSearch {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.sidebarLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarLink {
+  display: block;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebarLink:hover {
+  text-decoration: underline;
+}
+
+/* Top part of the sidebar (with login button) */
+.sidebarTop {
+  align-items: center;
+  margin-bottom: 20px;
+}
