@@ -75,6 +75,16 @@
   z-index: 900; /* Behind the sidebar */
 }
 
+.loginBtn {
+  background-color: #f11fb9; /* Pink color */
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .menuButton {

@@ -1,4 +1,7 @@
+"use client";
+
 import Navbar from "../components/navbar/navbar";
+import { LoginFlowProvider } from "./context";
 
 export default function withNavbar({
   children,
@@ -7,8 +10,10 @@ export default function withNavbar({
 }>) {
   return (
     <div className="h-full">
-      <Navbar />
-      <div>{children}</div>
+      <LoginFlowProvider>
+        <Navbar />
+        {children}
+      </LoginFlowProvider>
     </div>
   );
 }

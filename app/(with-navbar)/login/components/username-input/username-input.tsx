@@ -1,18 +1,19 @@
-import { useState } from "react";
+import { FormEvent } from "react";
 import styles from "./username-input.module.css";
-import { LOGIN_FLOW_STEPS } from "../login-flow-container/login-flow-container";
+import { LOGIN_FLOW_STEPS } from "../../page";
+import { useLoginFlow } from "@/app/(with-navbar)/hooks";
 
-type Props = {
-  onStepChange: (s: number) => void;
-};
+const UsernameInput = () => {
+  const { username, setUsername, setStep, setSecureWord } = useLoginFlow();
 
-const UsernameInput = ({ onStepChange }: Props) => {
-  const [username, setUsername] = useState("");
-
-  const handleLogin = () => {
-    // Handle the login logic here
-    alert(`Logged in as: ${username}`);
-    onStepChange(LOGIN_FLOW_STEPS.display_secure_password);
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    await fetch("/api/getSecureWord")
+      .then((response) => response.json())
+      .then((data) => {
+        setSecureWord(data.secureWord);
+      });
+    setStep(LOGIN_FLOW_STEPS.display_secure_password);
   };
 
   return (
