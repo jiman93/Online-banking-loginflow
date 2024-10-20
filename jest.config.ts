@@ -9,6 +9,13 @@ module.exports = {
       },
     ],
   },
+  globals: {
+    "ts-jest": {
+      tsconfig: {
+        jsx: "react-jsx", // Override the "jsx" option here for Jest tests
+      },
+    },
+  },
   moduleFileExtensions: ["ts", "tsx", "js", "json", "node"],
   moduleNameMapper: {
     "\\.module\\.(css|scss)$": "identity-obj-proxy",
