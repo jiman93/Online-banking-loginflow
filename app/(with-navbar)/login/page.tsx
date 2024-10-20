@@ -1,9 +1,9 @@
 "use client";
 
-import styles from "./page.module.css";
 import UsernameInput from "./components/username-input/username-input";
 import DisplaySecurePassword from "./components/display-secure-password/display-secure-password";
 import PasswordInput from "./components/password-input/password-input";
+import styles from "./page.module.css";
 import { useLoginFlow } from "../hooks";
 
 export const LOGIN_FLOW_STEPS = {

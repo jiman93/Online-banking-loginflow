@@ -1,7 +1,7 @@
 import { FormEvent } from "react";
-import styles from "./username-input.module.css";
 import { LOGIN_FLOW_STEPS } from "../../page";
-import { useLoginFlow } from "@/app/(with-navbar)/hooks";
+import { useLoginFlow } from "../../../hooks";
+import styles from "./username-input.module.css";
 
 const UsernameInput = () => {
   const { username, setUsername, setStep, setSecureWord } = useLoginFlow();
