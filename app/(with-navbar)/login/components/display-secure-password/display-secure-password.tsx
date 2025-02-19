@@ -1,6 +1,6 @@
 "use client";
 
-import { LOGIN_FLOW_STEPS } from "@/app/(with-navbar)/steps";
+import { LOGIN_FLOW_STEPS } from "@/app/(with-navbar)/context";
 import styles from "./display-secure-password.module.css";
 import { useLoginFlow } from "@/app/(with-navbar)/hooks";
 

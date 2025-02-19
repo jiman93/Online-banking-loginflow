@@ -5,7 +5,7 @@ import DisplaySecurePassword from "./components/display-secure-password/display-
 import PasswordInput from "./components/password-input/password-input";
 import styles from "./page.module.css";
 import { useLoginFlow } from "../hooks";
-import { LOGIN_FLOW_STEPS } from "../steps";
+import { LOGIN_FLOW_STEPS } from "../context";
 
 const LoginFlowContainer = () => {
   const { step } = useLoginFlow();
