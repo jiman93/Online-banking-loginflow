@@ -1,7 +1,7 @@
 "use client";
 
+import { LOGIN_FLOW_STEPS } from "@/app/(with-navbar)/steps";
 import styles from "./display-secure-password.module.css";
-import { LOGIN_FLOW_STEPS } from "../../page";
 import { useLoginFlow } from "@/app/(with-navbar)/hooks";
 
 const DisplaySecurePassword = () => {
